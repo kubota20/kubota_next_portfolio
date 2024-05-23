@@ -19,3 +19,11 @@ npx shadcn-ui@latest init
 ```
 
 [shadcnUI のセットアップ](https://ui.shadcn.com/docs/installation/next)はこちらで確認して下さい。
+
+shadcn-ui の button コンポーネントを作ります
+
+```
+
+npx shadcn-ui@latest add button
+
+```
