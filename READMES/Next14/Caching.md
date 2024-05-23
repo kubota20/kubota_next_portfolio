@@ -48,3 +48,21 @@ revalidatePath('/')
 2, `Server Actions` ユーザーの操作 (フォームの送信、ボタンのクリックなど) 後にデータを再検証します。
 
 [revalidatePath API](https://nextjs.org/docs/app/api-reference/functions/revalidatePath)で確認
+
+### オプトアウト
+
+`cache`での個々のデータ取得について、`no-store`で`fetch`が呼び出されるたびにデータが取得されます。
+
+```
+
+fetch(`https://...`, { cache: 'no-store' })
+
+```
+
+`注意`: データ キャッシュはページ/ルートでのみ利用可能であり、ミドルウェアでは利用できません。ミドルウェア内で行われるフェッチはデフォルトではキャッシュされません。
+
+## Full Route Cache (フルルートキャッシュ)
+
+Next.js ではフルルートキャッシュが使われています。違いは React レンダリングでわかります。
+
+- -React-:
