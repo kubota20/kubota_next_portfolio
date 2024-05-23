@@ -65,4 +65,29 @@ fetch(`https://...`, { cache: 'no-store' })
 
 Next.js ではフルルートキャッシュが使われています。違いは React レンダリングでわかります。
 
-- _React_:
+- _React_: `React Server Component Payload`と呼ばれるストリーミング用に最適化された特別なデータ形式にレンダリングします。
+
+- _Next_: `React Server Component Payload`と`Client Component` 使用して、`サーバー上でHTML をレンダリング`します。
+
+Next.js の方が時間がかかるように見えるが、作業をキャッシュしたり応答を送信したりする前に、すべてがレンダリングされるのを待つ必要はありません。代わりに、作業が完了すると応答をストリーミングできます。
+
+## キャッシュメカニズムと関連 API
+
+| API                             | ルーターキャッシュ          | フルルートキャッシュ         | データキャッシュ             | リアクトキャッシュ |
+| ------------------------------- | --------------------------- | ---------------------------- | ---------------------------- | ------------------ |
+| `<Link prefetch>`               | キャッシュ                  |                              |                              |                    |
+| `router.prefetch`               | キャッシュ                  |                              |                              |                    |
+| `router.refresh`                | 再検証                      |                              |                              |                    |
+| `fetch`                         |                             |                              | キャッシュ                   |                    |
+| `fetch options.cache`           |                             |                              | キャッシュまたはオプトアウト |                    |
+| `fetch options.next.revalidate` |                             | 再検証                       | 再検証                       |                    |
+| `fetch options.next.tags`       |                             | キャッシュ                   | キャッシュ                   |                    |
+| `revalidateTag`                 | 再検証 (サーバーアクション) | 再検証                       | 再検証                       |                    |
+| `revalidatePath`                | 再検証 (サーバーアクション) | 再検証                       | 再検証                       |                    |
+| `const revalidate`              |                             | 再検証またはオプトアウト     | 再検証またはオプトアウト     |                    |
+| `const dynamic`                 |                             | キャッシュまたはオプトアウト | キャッシュまたはオプトアウト |                    |
+| `cookies`                       | 再検証 (サーバーアクション) |                              |                              |                    |
+| `headers、searchParams`         |                             |                              | 身を引く                     |                    |
+| `generateStaticParams`          |                             | キャッシュ                   |                              |                    |
+| `React.cache`                   |                             |                              |                              | キャッシュ         |
+| `unstable_cache`                |                             |                              |                              |                    |
