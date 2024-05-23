@@ -65,4 +65,4 @@ fetch(`https://...`, { cache: 'no-store' })
 
 Next.js ではフルルートキャッシュが使われています。違いは React レンダリングでわかります。
 
-- -React-:
+- _React_:
