@@ -8,9 +8,9 @@ interface BlogListProps {
 
 const BlogList: React.FC<BlogListProps> = ({ title }) => {
   return (
-    <div className="mt-10 space-y-4">
+    <div className="mt-10 space-y-4 mb-10">
       <h2 className="font-bold text-2xl">{title}</h2>
-      <div className="grid col-span-1 sm:grid-cols-2  gap-4">
+      <div className="grid col-span-1 sm:grid-cols-2 gap-4">
         <Suspense fallback={<Loading />}>
           <BlogCard />
         </Suspense>
