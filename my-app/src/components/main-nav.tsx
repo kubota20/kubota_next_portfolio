@@ -21,7 +21,7 @@ const MainNav = () => {
     },
     {
       href: `/blogs`,
-      label: "Blog",
+      label: "Blogs",
       active: pathName === `/blogs`,
     },
     {
