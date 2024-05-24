@@ -1,6 +1,7 @@
+import { Smartphone, TabletSmartphone } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import Infos from "@/components/ui/infos";
-import { Smartphone, TabletSmartphone } from "lucide-react";
 
 import { testData } from "@/data/testData";
 
@@ -31,7 +32,10 @@ const ProjectCard = () => {
         </div>
       </div>
       {/* 名前や使用技術、ページリンク */}
-      <Infos data={testData} />
+
+      {testData.map((item) => (
+        <Infos key={item.name} item={item} />
+      ))}
     </div>
   );
 };
