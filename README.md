@@ -19,4 +19,9 @@
 
 5. [project-list](/my-app//src//components/project-list.tsx)と[blog-list](/my-app//src//components/blog-list.tsx)を作成
 
- <!-- コーポレートサイト,ec サイト,ブランドサイト -->
+6. 初期のポートフォリオのホームデザインとしてコーポレートサイトを作成、[ここで確認](</my-app/src/app/(homedesign)/corporate-site>)
+
+   - コーポレートサイトを作成手順は一度 ChatGPT で簡単なデザインを書いてもらい、そこにスタイルをあてました。画像は`pexels`から貰いました。
+   - この[コーポレートサイト](</my-app/src/app/(homedesign)/corporate-site>)はモーダル用のテストをしたい為作りました。大体のポートフォリオサイトが出来上がったらどんどんデザインやサイトなどを作成していく予定です。`モーダル`については`手順７`を確認して下さい。
+
+7.
