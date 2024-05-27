@@ -17,8 +17,8 @@ const Navbar = () => {
   return (
     <header className="bg-sky-600 text-white p-4 relative">
       <Container>
-        <div className="flex justify-between items-center px-4">
-          <h1 className="text-2xl font-bold">Corporate Site</h1>
+        <div className="flex justify-between items-center px-2 sm:px-4">
+          <h1 className="text-base sm:text-2xl font-bold">Corporate Site</h1>
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>

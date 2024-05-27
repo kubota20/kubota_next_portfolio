@@ -11,27 +11,28 @@ const Services = () => {
   return (
     <>
       <Container>
-        <section className="px-4 sm:px-6 lg:px-8 relative">
-          <div className="md:aspect-[2/1] ">
+        <section className="px-2 sm:px-4 md:px-6 lg:px-8 relative">
+          <div className="object-center object-cover">
             <Image
               src={imag1}
               alt="img"
-              className="md:aspect-[2/1] object-center object-cover rounded-2xl"
+              className="object-center object-cover rounded-2xl"
             />
           </div>
-          <div className="absolute w-full top-8 pl-4">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <div className="absolute w-full top-1 pl-1 sm:top-8 sm:pl-4 ">
+            <h2 className="text-xs sm:text-2xl lg:text-3xl font-black mb-2 sm:mb-4">
               Welcome to Our Corporate Site
             </h2>
-            <p className="text-xl mb-8 w-64 lg:w-full">
+            <p className="text-[8px] leading-3 sm:text-xl w-64 lg:w-full font-medium">
               We provide the best services for your business needs.
             </p>
           </div>
-          <div className="absolute w-full bottom-1/3 text-center">
-            <Button className="bg-sky-600 hover:bg-sky-700">Learn More</Button>
+          <div className="absolute w-full bottom-4 sm:bottom-1/3 text-center">
+            <Button className="text-xs font-bold lg:text-lg shadow shadow-sky-400 bg-sky-600 hover:bg-sky-700">
+              Learn More
+            </Button>
           </div>
         </section>
-
         <section className="my-16 px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl font-bold my-12">Our Services</h3>
 
@@ -39,7 +40,7 @@ const Services = () => {
             {dataValue.map((item, index) => (
               <div
                 key={item.id}
-                className={`flex items-center md:flex-row p-4 rounded  border-b-4 border-sky-600 shadow-md shadow-sky-400 ${
+                className={`cursor-pointer flex items-center md:flex-row p-4 rounded  border-b-4 border-sky-600 shadow-md shadow-sky-400 transition duration-300 hover:bg-sky-100 ${
                   index % 2 === 0
                     ? "flex-row-reverse border-r-4 md:border-r-0"
                     : "border-l-4 md:border-l-0"
@@ -62,7 +63,6 @@ const Services = () => {
             ))}
           </div>
         </section>
-
         <section className="my-16 px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl font-bold my-12">お知らせ</h3>
           <ScrollArea className="h-[350px] w-full rounded-md border p-4 border-b-4 border-sky-600 shadow-md shadow-sky-400">
@@ -70,7 +70,7 @@ const Services = () => {
               {noticeValue.map((item) => (
                 <div
                   key={item.id}
-                  className="rounded-md border p-4 gap-5 shadow-md"
+                  className="cursor-pointer rounded-md border p-4 gap-5 shadow-md transition duration-300 hover:bg-sky-100 "
                 >
                   <p className="font-semibold">{item.title}</p>
                   <p className="font-medium text-gray-500">{item.summary}</p>
@@ -79,6 +79,7 @@ const Services = () => {
             </div>
           </ScrollArea>
         </section>
+        ß
       </Container>
     </>
   );

@@ -15,6 +15,16 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      keyframes: {
+        slideLine: {
+          "0%": { width: "0", left: "0" },
+          "50%": { width: "100%", left: "0" },
+          "100%": { width: "0", left: "100%" },
+        },
+      },
+      animation: {
+        slideLine: "slideLine 0.5s forwards",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
