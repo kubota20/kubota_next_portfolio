@@ -1,4 +1,6 @@
+import { cn } from "@/lib/utils";
 import { Metadata } from "next";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "kubotaのポートフォリオ",
@@ -10,5 +12,11 @@ export default async function HomeDesignLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <html lang="ja">
+      <body className={cn("min-h-screen bg-background font-sans antialiased")}>
+        {children}
+      </body>
+    </html>
+  );
 }
