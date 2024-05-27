@@ -79,7 +79,6 @@ const Services = () => {
             </div>
           </ScrollArea>
         </section>
-        ß
       </Container>
     </>
   );
