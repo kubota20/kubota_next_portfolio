@@ -12,9 +12,9 @@ const BlogCard = () => {
         </div>
         {/* 名前や使用技術、ページリンク */}
 
-        {testData.map((item) => (
+        {/* {testData.map((item) => (
           <Infos key={item.name} item={item} />
-        ))}
+        ))} */}
       </div>
     </div>
   );
