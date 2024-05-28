@@ -10,16 +10,16 @@ interface InfosProps {
 const Infos: React.FC<InfosProps> = ({ item }) => {
   return (
     <div className="relative">
-      <div key={item.name} className="text-wrap">
+      <div key={item?.name} className="text-wrap">
         <p className="absolute right-0 text-xs text-gray-500">
-          {item.createdAt}
+          {item?.createdAt}
         </p>
         {/* タイトル */}
-        <h3 className="font-bold">{item.name}</h3>
+        <h3 className="font-bold">{item?.name}</h3>
         {/* 使用技術 */}
         <ul>
           <li className="text-sm pl-1 text-gray-500 truncate">
-            {item.technologies.join(", ")}
+            {item?.technologies.join(", ")}
           </li>
         </ul>
       </div>
