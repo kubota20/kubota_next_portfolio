@@ -7,6 +7,8 @@ import { Inter as FontSans } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
+import { ModalProvider } from "@/provisers/modal-provider";
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -33,6 +35,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <ModalProvider />
       </body>
     </html>
   );
