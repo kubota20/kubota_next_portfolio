@@ -39,3 +39,15 @@
 - コーポレートサイトを作成手順は一度 ChatGPT で簡単なデザインを書いてもらい、そこで追加にスタイルや画像を入れました。画像は`pexels`から貰いました。
 
 - この[コーポレートサイト](</my-app/src/app/(homedesign)/corporate-site>)はモーダル用のテストをしたい為作りました。大体のポートフォリオサイトが出来上がったらどんどんデザインやサイトなどを作成していく予定です。`モーダル`については`手順７`を確認して下さい。
+
+### 7.
+
+- `zustand`を使ってモーダルの状態を管理するためのカスタムフックを作ります。[hooks](/my-app/src/hooks/use-mobil-modal.tsx)
+
+- `shadcnUI`から`dialog`使って、使い回しができる[Modal](/my-app/src/components/ui/modal.tsx)を作成
+
+- 作った`Modal`を使ってモバイル用の[MobilModal](/my-app/src/components/modals/mobil-modal.tsx)を作成
+
+- `ModalProvider`を作り`layout.tsx`に追加、これで`/app/(roures)`にあるページの全てに`MobilModal`が使えます
+
+(`MobilModal`の中身は作ったサイト情報のほか`iframe要素`を使ってサイトをスマホサイズとダブレットサイズに表示されます)
