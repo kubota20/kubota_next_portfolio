@@ -51,3 +51,7 @@
 - `ModalProvider`を作り`layout.tsx`に追加、これで`/app/(roures)`にあるページの全てに`MobilModal`が使えます
 
 (`MobilModal`の中身は作ったサイト情報のほか`iframe要素`を使ってサイトをスマホサイズとダブレットサイズに表示されます)
+
+### 8. Admin
+
+- 管理者用に`create-next-app`に`Admin`を作成
