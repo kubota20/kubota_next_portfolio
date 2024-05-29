@@ -14,12 +14,6 @@ const HomePage = () => {
           <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
             <ProjectList title="レイアウト" />
 
-            {/* <iframe
-              src="https://kubota-next-portfolio.vercel.app/projects/corporate-site"
-              width="100%"
-              height="500px"
-            ></iframe> */}
-
             <Separator />
 
             <BlogList title="ブログ" />
