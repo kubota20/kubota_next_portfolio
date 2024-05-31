@@ -8,7 +8,7 @@
 
 ### 1.
 
-- 環境構築 [ここで確認](/READMES/CreationProcedure/Procedure1.md)
+- 環境構築 [ここで確認](/READMES/CreationProcedure/Next14Environment.md)
 
 ### 2.
 
@@ -54,4 +54,6 @@
 
 ### 8. Admin
 
-- 管理者用に`create-next-app`に`Admin`を作成
+- 管理者用に`create-next-app`をして`Admin`を作成
+
+- 認証機能に next-auth とデータベースは supabase で SQL の代わりに prisma で書きます。[ここで確認](/READMES/CreationProcedure/AdminEnvironment.md)
