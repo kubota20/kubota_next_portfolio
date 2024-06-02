@@ -16,7 +16,8 @@ npx create-next-app@latest admin --typescript --tailwind --eslint
 
 npm i -D prisma
 
-npm i @prisma/client @next-auth/prisma-adapter
+<!-- v4からは@auth/prisma-adapter -->
+npm i @prisma/client @auth/prisma-adapter
 
 ```
 
