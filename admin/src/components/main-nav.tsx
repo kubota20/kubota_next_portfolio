@@ -30,7 +30,7 @@ export const MainNav = ({
   ];
 
   return (
-    <nav className={cn("space-x-4", className)}>
+    <>
       {routes.map((route) => (
         <Link
           key={route.href}
@@ -43,6 +43,6 @@ export const MainNav = ({
           {route.label}
         </Link>
       ))}
-    </nav>
+    </>
   );
 };
