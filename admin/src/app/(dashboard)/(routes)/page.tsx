@@ -1,13 +1,5 @@
-import GoogleButton from "@/components/ui/google-button";
-
 const HomePage = () => {
-  return (
-    <main>
-      <div>
-        <GoogleButton />
-      </div>
-    </main>
-  );
+  return <div>aaa</div>;
 };
 
 export default HomePage;

@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { NextAuthProvider } from "@/providers/providers";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/navbar";
+import { ModalProvider } from "@/providers/modal-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +21,11 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={cn(inter.className)}>
-        <NextAuthProvider>{children}</NextAuthProvider>
+        <NextAuthProvider>
+          <Navbar />
+          {children}
+          <ModalProvider />
+        </NextAuthProvider>
       </body>
     </html>
   );
