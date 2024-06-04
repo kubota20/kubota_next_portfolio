@@ -1,6 +1,9 @@
 "use client";
 
 import { MainNav } from "@/components/main-nav";
+import { Button } from "@/components/ui/button";
+import { signOut } from "next-auth/react";
+import { LogOut } from "lucide-react";
 
 const SideNav = () => {
   return (
@@ -12,6 +15,12 @@ const SideNav = () => {
             <nav className="grid grid-cols-1 gap-y-2">
               <MainNav />
             </nav>
+            {/* ログアウトボタン */}
+            <div className="mt-4 text-end">
+              <Button size="icon" onClick={() => signOut()}>
+                <LogOut />
+              </Button>
+            </div>
           </div>
         </div>
       </div>
