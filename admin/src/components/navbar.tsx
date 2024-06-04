@@ -1,5 +1,6 @@
-import { MainNav } from "./main-nav";
-import SideNav from "./side-nav";
+import { MainNav } from "@/components/main-nav";
+import SideNav from "@/components/side-nav";
+import { UserAvatar } from "@/components/ui/user-avatar";
 
 const Navbar = () => {
   return (
@@ -7,9 +8,10 @@ const Navbar = () => {
       <div className="border-b">
         <div className="flex h-16 items-center px-4 justify-between">
           <SideNav />
-          <nav className="hidden md:block ml-auto space-x-4">
+          <nav className="hidden md:block ml-auto space-x-4 mr-4">
             <MainNav />
           </nav>
+          <UserAvatar />
         </div>
       </div>
     </header>
