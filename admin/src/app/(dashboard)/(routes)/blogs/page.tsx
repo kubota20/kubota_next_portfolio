@@ -1,6 +1,7 @@
 import Container from "@/components/ui/container";
+import React from "react";
 
-const HomePage = () => {
+const BlogsPage = () => {
   return (
     <div className="my-12 flex flex-1">
       <Container>
@@ -10,4 +11,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default BlogsPage;
