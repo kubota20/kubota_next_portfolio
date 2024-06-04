@@ -14,18 +14,18 @@ export const MainNav = ({
   const routes = [
     {
       href: `/`,
-      label: "概要",
+      label: "Home",
       active: pathName === `/`,
     },
     {
-      href: `/`,
-      label: "画像",
-      active: pathName === `/`,
+      href: `/projects`,
+      label: "Projects",
+      active: pathName === `/projects`,
     },
     {
-      href: `/`,
-      label: "カテゴリ",
-      active: pathName === `/`,
+      href: `/blogs`,
+      label: "Blogs",
+      active: pathName === `/blogs`,
     },
   ];
 
