@@ -17,15 +17,12 @@ export const authOptions: NextAuthOptions = {
   ],
   session: {
     strategy: "jwt",
+    maxAge: 24 * 60 * 60, // ログイン時間、24時間まで
   },
   callbacks: {
     async signIn({ user }) {
       const myEmail = process.env.NEXT_PUBLIC_MY_EMAIL as string;
-      if (user.email && myEmail === user.email) {
-        return true;
-      } else {
-        return false;
-      }
+      return user.email === myEmail;
     },
     async session({ session, token }) {
       return {
