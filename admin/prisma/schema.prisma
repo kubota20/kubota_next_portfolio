@@ -70,11 +70,11 @@ model VerificationToken {
 
 model Project {
   id String @id @default(cuid())
-  userId String
   title String
   summary String
-  iframesrc String
+  iframeSrc String
   link String
+  imageUrl String
   images Image[]
   categoryId String
   category Category @relation("CategoryToProject",fields: [categoryId],references: [id])
