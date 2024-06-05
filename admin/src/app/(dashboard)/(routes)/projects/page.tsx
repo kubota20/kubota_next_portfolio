@@ -1,11 +1,12 @@
 import Container from "@/components/ui/container";
-import React from "react";
+
+import { ProjectClient } from "./components/client";
 
 const ProjectsPage = () => {
   return (
     <div className="my-12 flex flex-1">
       <Container>
-        <div className="">item</div>
+        <ProjectClient />
       </Container>
     </div>
   );
