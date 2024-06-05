@@ -6,7 +6,7 @@
 
 ## 作成手順
 
-### 1.
+### 1. Client
 
 - 環境構築 [ここで確認](/READMES/CreationProcedure/Next14Environment.md)
 
@@ -18,21 +18,19 @@
 
 - Navbar と Footer を layout.tsx に追加
 
-### 3.
-
 - レイアウトに ui に Container を作成
 
-### 4.　
+### 3.　
 
 - ページを作成[about](</my-app/src/app/(routes)/about>),[projects](</my-app/src/app/(routes)/projects>),[blogs](</my-app/src/app/(routes)/blogs>),[contact](</my-app/src/app/(routes)/contact>)
 
 - ページの動的ルートを作成[project](</my-app/src/app/(routes)/projects/[projectId]>),[blog](</my-app/src/app/(routes)/blogs/[blogId]>),
 
-### 5.
+### 4.
 
 - [project-list](/my-app//src//components/project-list.tsx)と[blog-list](/my-app//src//components/blog-list.tsx)を作成
 
-### 6.
+### 5.
 
 - 初期のポートフォリオのホームデザインとしてコーポレートサイトを作成、[ここで確認](</my-app/src/app/(homedesign)/corporate-site>)
 
@@ -40,7 +38,7 @@
 
 - この[コーポレートサイト](</my-app/src/app/(homedesign)/corporate-site>)はモーダル用のテストをしたい為作りました。大体のポートフォリオサイトが出来上がったらどんどんデザインやサイトなどを作成していく予定です。`モーダル`については`手順７`を確認して下さい。
 
-### 7.
+### 6.
 
 - `zustand`を使ってモーダルの状態を管理するためのカスタムフックを作ります。[hooks](/my-app/src/hooks/use-mobil-modal.tsx)
 
@@ -52,8 +50,22 @@
 
 (`MobilModal`の中身は作ったサイト情報のほか`iframe要素`を使ってサイトをスマホサイズとダブレットサイズに表示されます)
 
-### 8. Admin
+### 7. Admin
 
 - 管理者用に`create-next-app`をして`Admin`を作成
 
 - 認証機能に next-auth とデータベースは supabase で SQL の代わりに prisma で書きます。[ここで確認](/READMES/CreationProcedure/AdminEnvironment.md)
+
+- [schema.prisma](/admin/prisma/schema.prisma)に認証用テーブルを作成。
+
+- 認証方法は Google 認証だけ行います。[auth.ts](/admin/src/lib/auth.ts)(自分用のなので Google 認証だけです。また、自分のメールアドレスじゃないとログインできないようにしてあります)
+
+- ログインモダールを作成。
+
+- [middleware.ts](/admin/src/middleware.ts)を作成し、必ずログインしないと他のベージに飛ばないようにしました。
+
+### 8.
+
+- [ProjectsPage](</admin/src/app/(dashboard)/(routes)/projects>),[BlogsPage](</admin/src/app/(dashboard)/(routes)/blogs>),[CategoriesPage](</admin/src/app/(dashboard)/(routes)/categories>)等を作成
+
+- ProjectsPage と BlogsPage のデータテーブルを作成
