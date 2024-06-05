@@ -27,6 +27,11 @@ export const MainNav = ({
       label: "Blogs",
       active: pathName === `/blogs`,
     },
+    {
+      href: `/categories`,
+      label: "Categories",
+      active: pathName === `/categories`,
+    },
   ];
 
   return (
