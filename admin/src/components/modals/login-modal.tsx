@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useLoginModal } from "@/hooks/use-login-modal";
 
 import { Modal } from "@/components/ui/modal";
@@ -8,7 +7,6 @@ import GoogleButton from "@/components/ui/google-button";
 
 export const LoginModal = () => {
   const loginModal = useLoginModal();
-  const [loading, setLoading] = useState(false);
 
   return (
     <Modal
