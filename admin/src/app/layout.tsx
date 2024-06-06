@@ -5,6 +5,7 @@ import { NextAuthProvider } from "@/providers/providers";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 import { ModalProvider } from "@/providers/modal-provider";
+import { ToasterProvider } from "@/providers/toast-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <ModalProvider />
+          <ToasterProvider />
         </NextAuthProvider>
       </body>
     </html>
