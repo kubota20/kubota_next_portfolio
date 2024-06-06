@@ -77,7 +77,7 @@ model Project {
   imageUrl String
   images Image[]
   categoryId String
-  category Category @relation("CategoryToProject",fields: [categoryId],references: [id])
+  category Category @relation(fields: [categoryId],references: [id])
   release Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -92,7 +92,7 @@ model Blog {
   link String
   images Image[]
   categoryId String
-  category Category @relation("CategoryToBlog",fields: [categoryId],references: [id])
+  category Category @relation(fields: [categoryId],references: [id])
   release Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -117,8 +117,10 @@ model Image {
 model Category {
   id   String @id @default(cuid())
   name String 
-  blogs Blog[] @relation("CategoryToBlog")
-  projects Project[] @relation("CategoryToProject")
+  blogs Blog[] 
+  projects Project[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@map("category")
 }
