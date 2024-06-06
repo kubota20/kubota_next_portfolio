@@ -3,7 +3,7 @@
 import { Checkbox } from "@/components/ui/checkbox";
 import { ColumnDef } from "@tanstack/react-table";
 
-// import { CellAction } from "./cell-action";
+import { CellAction } from "./call-action";
 
 export type ProjectColumnProps = {
   id: string;
@@ -75,5 +75,9 @@ export const columns: ColumnDef<ProjectColumnProps>[] = [
     accessorKey: "createdAt",
     header: "Date",
   },
-  { id: "actions", enableHiding: false, header: "設定" },
+  {
+    id: "actions",
+    header: "設定",
+    cell: ({ row }) => <CellAction data={row.original} />,
+  },
 ];
