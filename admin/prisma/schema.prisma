@@ -90,6 +90,7 @@ model Blog {
   title String
   summary String
   link String
+  imageUrl String
   images Image[]
   categoryId String
   category Category @relation(fields: [categoryId],references: [id])
