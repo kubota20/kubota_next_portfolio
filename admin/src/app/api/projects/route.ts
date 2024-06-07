@@ -2,14 +2,6 @@ import { NextResponse } from "next/server";
 
 import { prisma } from "@/lib/prisma";
 
-export const connect = async () => {
-  try {
-    prisma.$connect();
-  } catch (error) {
-    return Error("データベース接続失敗");
-  }
-};
-
 // 渡す
 export async function POST(req: Request) {
   try {
@@ -40,8 +32,6 @@ export async function POST(req: Request) {
       return new NextResponse("categoryId is required", { status: 400 });
     }
 
-    await connect();
-
     // create 作成
     const project = await prisma.project.create({
       data: {
@@ -65,15 +55,13 @@ export async function POST(req: Request) {
 
 export async function GET(req: Request) {
   try {
-    await connect();
-
     const { searchParams } = new URL(req.url);
     const categoryId = searchParams.get("categoryId") || undefined;
 
     const projects = await prisma.project.findMany({
       where: {
         categoryId,
-        release: false,
+        release: true,
       },
       include: {
         category: true,
