@@ -11,10 +11,8 @@ const ProjectPage = async ({ params }: { params: { projectId: string } }) => {
   const categories = await prisma.category.findMany();
 
   return (
-    <div className="flex-col">
-      <div className="flex-1 space-y-4 p-8 pt-6">
-        <ProjectForm categories={categories} initiaData={project} />
-      </div>
+    <div className="flex-1 space-y-4 p-8 pt-6">
+      <ProjectForm categories={categories} initiaData={project} />
     </div>
   );
 };

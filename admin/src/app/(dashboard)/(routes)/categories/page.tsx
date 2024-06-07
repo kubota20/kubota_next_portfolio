@@ -1,8 +1,9 @@
 import { prisma } from "@/lib/prisma";
 
+import Container from "@/components/ui/container";
+
 import { CategoryColumnProps } from "./components/columns";
 import { CategoryClient } from "./components/client";
-import Container from "@/components/ui/container";
 
 const CategoriesPage = async () => {
   const categories = await prisma.category.findMany();

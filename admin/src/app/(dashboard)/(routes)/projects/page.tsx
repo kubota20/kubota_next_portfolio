@@ -30,7 +30,7 @@ const ProjectsPage = async () => {
   );
 
   return (
-    <div className="pt-6 flex flex-1 p-8">
+    <div className="pt-6  flex-1 p-8">
       <Container>
         <ProjectClient data={formattedProjectsColumn} />
       </Container>
