@@ -1,5 +1,4 @@
 import { prisma } from "@/lib/prisma";
-import React from "react";
 import { ProjectForm } from "./components/project-form";
 
 const ProjectPage = async ({ params }: { params: { projectId: string } }) => {
