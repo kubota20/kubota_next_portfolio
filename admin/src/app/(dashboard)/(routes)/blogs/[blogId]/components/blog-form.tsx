@@ -42,12 +42,13 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
+import { IamgeUpload } from "@/components/ui/iamge-upload";
 
 const formScheme = z.object({
   title: z.string().min(3, { message: "3文字以上を入力" }),
-  summary: z.string().min(10, { message: "10文字以上を入力" }),
-  link: z.string(),
-  imageUrl: z.string(),
+  summary: z.string().min(3, { message: "3文字以上を入力" }),
+  link: z.string().min(1),
+  imageUrl: z.string().min(1),
   categoryId: z.string().min(1),
   release: z.boolean().default(false).optional(),
 });
@@ -226,10 +227,11 @@ export const BlogForm = ({ initiaData, categories }: BlogFormProps) => {
                 <FormItem>
                   <FormLabel>imageUrl</FormLabel>
                   <FormControl>
-                    <Input
+                    <IamgeUpload
+                      value={field.value ? [field.value] : []}
                       disabled={loading}
-                      placeholder="imageUrl"
-                      {...field}
+                      onUploadSuccess={(url) => field.onChange(url)}
+                      onRemove={() => field.onChange("")}
                     />
                   </FormControl>
 
