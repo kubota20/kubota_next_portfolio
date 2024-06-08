@@ -1,14 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
-export const connect = async () => {
-  try {
-    prisma.$connect();
-  } catch (error) {
-    return Error("データベース接続失敗");
-  }
-};
-
 // 取得
 export async function GET(
   req: Request,

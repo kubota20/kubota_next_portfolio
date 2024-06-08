@@ -30,10 +30,12 @@ const ProjectsPage = async () => {
   );
 
   return (
-    <div className="pt-6  flex-1 p-8">
-      <Container>
-        <ProjectClient data={formattedProjectsColumn} />
-      </Container>
+    <div className="w-full flex items-center justify-center">
+      <div className="pt-6 p-8 w-full  sm:max-w-screen-sm md:max-w-screen-md 2xl:max-w-screen-lg">
+        <Container>
+          <ProjectClient data={formattedProjectsColumn} />
+        </Container>
+      </div>
     </div>
   );
 };

@@ -46,7 +46,6 @@ import {
 const formScheme = z.object({
   title: z.string().min(3, { message: "3文字以上を入力" }),
   summary: z.string().min(10, { message: "10文字以上を入力" }),
-  iframeSrc: z.string(),
   link: z.string(),
   imageUrl: z.string(),
   categoryId: z.string().min(1),
@@ -90,6 +89,7 @@ export const BlogForm = ({ initiaData, categories }: BlogFormProps) => {
 
   //   変更＆作成
   const onSubmit = async (data: BlogFormValues) => {
+    console.log("Submitting data:", data);
     try {
       setLoading(true);
       if (initiaData) {

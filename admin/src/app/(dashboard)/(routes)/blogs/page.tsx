@@ -27,10 +27,12 @@ const blogsPage = async () => {
   }));
 
   return (
-    <div className="pt-6 flex flex-1 p-8">
-      <Container>
-        <BlogClient data={formattedblogsColumn} />
-      </Container>
+    <div className="w-full flex items-center justify-center">
+      <div className="pt-6 p-8 w-full  sm:max-w-screen-sm md:max-w-screen-md 2xl:max-w-screen-lg">
+        <Container>
+          <BlogClient data={formattedblogsColumn} />
+        </Container>
+      </div>
     </div>
   );
 };

@@ -12,10 +12,12 @@ const CategoriesPage = async () => {
     (item) => ({ id: item.id, name: item.name })
   );
   return (
-    <div className="flex-1 space-y-4 p-8 pt-6">
-      <Container>
-        <CategoryClient data={formattedCategorieColumn} />
-      </Container>
+    <div className="w-full flex items-center justify-center">
+      <div className="pt-6 p-8 w-full  sm:max-w-screen-sm md:max-w-screen-md 2xl:max-w-screen-lg">
+        <Container>
+          <CategoryClient data={formattedCategorieColumn} />
+        </Container>
+      </div>
     </div>
   );
 };

@@ -69,7 +69,7 @@ export function DataTable<TData, TValue>({
           onChange={(event) =>
             table.getColumn(searchKey)?.setFilterValue(event.target.value)
           }
-          className="max-w-sm"
+          className="max-w-xs"
         />
         {/* テーブルメニュー */}
         <DropdownMenu>
@@ -129,7 +129,10 @@ export function DataTable<TData, TValue>({
                   data-state={row.getIsSelected() && "selected"}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell
+                      key={cell.id}
+                      className="text-ellipsis overflow-hidden "
+                    >
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()

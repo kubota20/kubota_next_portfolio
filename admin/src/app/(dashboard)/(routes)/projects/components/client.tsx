@@ -31,7 +31,7 @@ export const ProjectClient = ({ data }: ProductClientProps) => {
 
       <Separator />
 
-      <DataTable searchKey="name" columns={columns} data={data} />
+      <DataTable searchKey="title" columns={columns} data={data} />
     </>
   );
 };

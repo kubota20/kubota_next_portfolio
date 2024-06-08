@@ -63,8 +63,8 @@ export const columns: ColumnDef<ProjectColumnProps>[] = [
     header: "画像URL",
   },
   {
-    accessorKey: "iframesSrc",
-    header: "IframeSrc",
+    accessorKey: "iframeSrc",
+    header: "iframeSrc",
   },
   {
     accessorKey: "category",
