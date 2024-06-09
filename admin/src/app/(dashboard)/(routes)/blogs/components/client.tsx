@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import { BlogColumnProps, columns } from "./columns";
@@ -19,15 +18,6 @@ interface BlogClientProps {
 export const BlogClient = ({ data }: BlogClientProps) => {
   const router = useRouter();
 
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null;
-  }
   return (
     <>
       <div className="flex items-center justify-between">
