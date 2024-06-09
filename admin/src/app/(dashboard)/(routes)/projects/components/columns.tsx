@@ -51,7 +51,6 @@ export const columns: ColumnDef<ProjectColumnProps>[] = [
   },
   {
     accessorKey: "summary",
-    enableHiding: false,
     header: "概要",
   },
   {
@@ -68,7 +67,6 @@ export const columns: ColumnDef<ProjectColumnProps>[] = [
   },
   {
     accessorKey: "category",
-    enableHiding: false,
     header: "カテゴリ",
   },
   {
@@ -84,6 +82,7 @@ export const columns: ColumnDef<ProjectColumnProps>[] = [
   {
     id: "actions",
     header: "設定",
+    enableHiding: false,
     cell: ({ row }) => <CellAction data={row.original} />,
   },
 ];

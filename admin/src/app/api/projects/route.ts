@@ -32,6 +32,10 @@ export async function POST(req: Request) {
       return new NextResponse("categoryId is required", { status: 400 });
     }
 
+    if (!categoryId) {
+      return new NextResponse("categoryId is required", { status: 400 });
+    }
+
     // create 作成
     const project = await prisma.project.create({
       data: {
@@ -61,7 +65,6 @@ export async function GET(req: Request) {
     const projects = await prisma.project.findMany({
       where: {
         categoryId,
-        release: true,
       },
       include: {
         category: true,

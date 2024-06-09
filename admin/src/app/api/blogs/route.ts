@@ -56,6 +56,7 @@ export async function GET(req: Request) {
     const blogs = await prisma.blog.findMany({
       where: {
         categoryId,
+
         release: true,
       },
       include: {

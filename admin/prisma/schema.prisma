@@ -75,7 +75,6 @@ model Project {
   iframeSrc String
   link String
   imageUrl String
-  images Image[]
   categoryId String
   category Category @relation(fields: [categoryId],references: [id])
   release Boolean @default(false)
@@ -83,6 +82,7 @@ model Project {
   updatedAt DateTime @updatedAt
 
   @@index([categoryId])
+
 }
 
 model Blog {
@@ -91,7 +91,6 @@ model Blog {
   summary String
   link String
   imageUrl String
-  images Image[]
   categoryId String
   category Category @relation(fields: [categoryId],references: [id])
   release Boolean @default(false)
@@ -99,20 +98,7 @@ model Blog {
   updatedAt DateTime @updatedAt
 
   @@index([categoryId])
-}
 
-model Image {
-  id String @id @default(uuid())
-  projectId String
-  project Project @relation(fields: [projectId],references: [id],onDelete:Cascade )
-  blogId String
-  blog Blog @relation(fields: [blogId],references: [id],onDelete:Cascade )
-  url String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@index([projectId])
-  @@index([blogId])
 }
 
 model Category {

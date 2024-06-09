@@ -11,7 +11,10 @@ const ProjectsPage = async () => {
   // findMany	複数件取得 条件に一致する全てのレコードを取得
   const projects = await prisma.project.findMany({
     include: {
-      category: true, // カテゴリーデータを含める
+      category: true, // カテゴリを含める
+    },
+    orderBy: {
+      createdAt: "desc",
     },
   });
 
