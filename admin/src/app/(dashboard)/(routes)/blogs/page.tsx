@@ -22,7 +22,6 @@ const blogsPage = async () => {
     link: item.link,
     imageUrl: item.imageUrl,
     category: item.category?.name,
-
     release: item.release,
     createdAt: format(item.createdAt, "yyyy年MM月dd日 HH:mm"),
   }));

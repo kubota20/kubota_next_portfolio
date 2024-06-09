@@ -43,6 +43,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { IamgeUpload } from "@/components/ui/iamge-upload";
+import { Textarea } from "@/components/ui/textarea";
 
 const formScheme = z.object({
   title: z.string().min(3, { message: "3文字以上を入力" }),
@@ -195,7 +196,7 @@ export const ProjectForm = ({ initiaData, categories }: ProjectFormProps) => {
                 <FormItem>
                   <FormLabel>Summary</FormLabel>
                   <FormControl>
-                    <Input
+                    <Textarea
                       disabled={loading}
                       placeholder="summary"
                       {...field}
