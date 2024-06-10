@@ -169,13 +169,13 @@ export const ProjectForm = ({ initiaData, categories }: ProjectFormProps) => {
           className="space-y-8 w-full"
         >
           <div className="grid grid-cols-3 gap-8">
+            {/* title */}
             <FormField
               control={form.control}
               name="title"
               render={({ field }) => (
-                // title
                 <FormItem>
-                  <FormLabel>Title</FormLabel>
+                  <FormLabel>title</FormLabel>
                   <FormControl>
                     <Input
                       disabled={loading}
@@ -188,13 +188,14 @@ export const ProjectForm = ({ initiaData, categories }: ProjectFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* summary */}
             <FormField
               control={form.control}
               name="summary"
               render={({ field }) => (
-                // summary
                 <FormItem>
-                  <FormLabel>Summary</FormLabel>
+                  <FormLabel>summary</FormLabel>
                   <FormControl>
                     <Textarea
                       disabled={loading}
@@ -207,11 +208,12 @@ export const ProjectForm = ({ initiaData, categories }: ProjectFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* iframeSrc */}
             <FormField
               control={form.control}
               name="iframeSrc"
               render={({ field }) => (
-                // iframeSrc
                 <FormItem>
                   <FormLabel>iframeSrc</FormLabel>
                   <FormControl>
@@ -226,11 +228,12 @@ export const ProjectForm = ({ initiaData, categories }: ProjectFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* link */}
             <FormField
               control={form.control}
               name="link"
               render={({ field }) => (
-                // link
                 <FormItem>
                   <FormLabel>link</FormLabel>
                   <FormControl>
@@ -241,6 +244,8 @@ export const ProjectForm = ({ initiaData, categories }: ProjectFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* imageUrl */}
             <FormField
               control={form.control}
               name="imageUrl"
@@ -261,6 +266,8 @@ export const ProjectForm = ({ initiaData, categories }: ProjectFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* categoryId */}
             <FormField
               control={form.control}
               name="categoryId"
@@ -292,6 +299,8 @@ export const ProjectForm = ({ initiaData, categories }: ProjectFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* release */}
             <FormField
               control={form.control}
               name="release"

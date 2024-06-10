@@ -46,20 +46,20 @@ export const columns: ColumnDef<ProjectColumnProps>[] = [
   {
     accessorKey: "title",
     enableHiding: false,
-    header: "タイトル",
+    header: "title",
     cell: ({ row }) => <div>{row.getValue("title")}</div>,
   },
   {
     accessorKey: "summary",
-    header: "概要",
+    header: "summary",
   },
   {
     accessorKey: "link",
-    header: "リンク",
+    header: "link",
   },
   {
     accessorKey: "imageUrl",
-    header: "画像URL",
+    header: "imageUrl",
   },
   {
     accessorKey: "iframeSrc",
@@ -67,7 +67,7 @@ export const columns: ColumnDef<ProjectColumnProps>[] = [
   },
   {
     accessorKey: "category",
-    header: "カテゴリ",
+    header: "category",
   },
   {
     accessorKey: "release",

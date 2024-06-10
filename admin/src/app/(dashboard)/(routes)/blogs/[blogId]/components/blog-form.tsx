@@ -160,7 +160,10 @@ export const BlogForm = ({ initiaData, categories }: BlogFormProps) => {
           </Button>
         )}
       </div>
+
       <Separator className="my-4" />
+
+      {/* Title */}
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -171,9 +174,8 @@ export const BlogForm = ({ initiaData, categories }: BlogFormProps) => {
               control={form.control}
               name="title"
               render={({ field }) => (
-                // title
                 <FormItem>
-                  <FormLabel>Title</FormLabel>
+                  <FormLabel>title</FormLabel>
                   <FormControl>
                     <Input
                       disabled={loading}
@@ -186,13 +188,14 @@ export const BlogForm = ({ initiaData, categories }: BlogFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* summary */}
             <FormField
               control={form.control}
               name="summary"
               render={({ field }) => (
-                // summary
                 <FormItem>
-                  <FormLabel>Summary</FormLabel>
+                  <FormLabel>summary</FormLabel>
                   <FormControl>
                     <Textarea
                       disabled={loading}
@@ -205,11 +208,12 @@ export const BlogForm = ({ initiaData, categories }: BlogFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* link */}
             <FormField
               control={form.control}
               name="link"
               render={({ field }) => (
-                // link
                 <FormItem>
                   <FormLabel>link</FormLabel>
                   <FormControl>
@@ -220,6 +224,8 @@ export const BlogForm = ({ initiaData, categories }: BlogFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* imageUrl */}
             <FormField
               control={form.control}
               name="imageUrl"
@@ -240,6 +246,8 @@ export const BlogForm = ({ initiaData, categories }: BlogFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* categoryId */}
             <FormField
               control={form.control}
               name="categoryId"
@@ -271,6 +279,8 @@ export const BlogForm = ({ initiaData, categories }: BlogFormProps) => {
                 </FormItem>
               )}
             />
+
+            {/* release */}
             <FormField
               control={form.control}
               name="release"
@@ -290,6 +300,7 @@ export const BlogForm = ({ initiaData, categories }: BlogFormProps) => {
               )}
             />
           </div>
+
           <Button disabled={loading} className="ml-auto" type="submit">
             {action}
           </Button>
